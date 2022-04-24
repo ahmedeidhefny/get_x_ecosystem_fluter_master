@@ -13,7 +13,7 @@ class CounterPage extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: Colors.blueAccent),
-          child: GetBuilder<CounterController>(
+          child: GetX<CounterController>(
             init: CounterController(),
             builder: (controller)=>  Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +28,7 @@ class CounterPage extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${controller.count}',
+                  '${controller.count.value}',
                   style: TextStyle(fontSize: 16, color: Colors.white),
                 ),
                 IconButton(
