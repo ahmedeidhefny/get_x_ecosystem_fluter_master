@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 import 'package:get_x_ecosystem_fluter_master/controller/counter_controller.dart';
 
 class CounterPage extends StatelessWidget {
-  var controller = Get.put(CounterController(), permanent: false);
+  //var controller = Get.put(CounterController(), permanent: false);
+  final contr = Get.lazyPut(() => CounterController());
+  CounterController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
