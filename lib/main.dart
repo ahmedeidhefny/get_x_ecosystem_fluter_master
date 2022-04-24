@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x_ecosystem_fluter_master/utils/binding.dart';
 import 'package:get_x_ecosystem_fluter_master/view/Home.dart';
 import 'package:get_x_ecosystem_fluter_master/view/home.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_one.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: Binding(),
       getPages: [
         GetPage(name:"/1", page: ()=> PageOne()),
         GetPage(name:"/2", page: ()=> PageTwo()),
