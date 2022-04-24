@@ -26,4 +26,22 @@ class CounterController extends GetxController {
     if (count2 <= 0) return;
     count2--;
   }
+
+  @override
+  void onInit() {
+    print('onInit');
+    super.onInit();
+  }
+
+  @override
+  void onReady() {
+    print('onReady');
+    super.onReady();
+  }
+
+  @override
+  void onClose() {
+    print('onClose');
+    super.onClose();
+  }
 }

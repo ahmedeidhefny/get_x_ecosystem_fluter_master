@@ -4,7 +4,7 @@ import 'package:get_x_ecosystem_fluter_master/controller/counter_controller.dart
 
 class ShowCounterPage extends StatelessWidget {
   //final contr = Get.lazyPut(() => CounterController());
-  CounterController controller = Get.find();
+  //CounterController controller = Get.find();
 
   @override
   Widget build(BuildContext context) {
