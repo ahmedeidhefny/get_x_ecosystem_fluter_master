@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:get_x_ecosystem_fluter_master/controller/counter_controller.dart';
 
 class CounterPage extends StatelessWidget {
+  var controller = Get.put(CounterController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,38 +15,38 @@ class CounterPage extends StatelessWidget {
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: Colors.blueAccent),
-          child: GetX<CounterController>(
-            init: CounterController(),
-            builder: (controller)=>  Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                IconButton(
-                  onPressed: () {
-                    controller.increament();
-                  },
-                  icon: Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
-                ),
-                Text(
-                  '${controller.count.value}',
-                  style: TextStyle(fontSize: 16, color: Colors.white),
-                ),
-                IconButton(
-                  onPressed: () {
-                    controller.decreament();
-                  },
-                  icon: Icon(
-                    Icons.remove,
-                    color: Colors.white,
-                  ),
-                ),
-              ],
+          child: Obx (() => Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+              onPressed: () {
+                controller.increament();
+              },
+              icon: Icon(
+                Icons.add,
+                color: Colors.white,
+              ),
             ),
+            Text(
+              '${controller.count.value}',
+              style: TextStyle(fontSize: 16, color: Colors.white),
+            ),
+            IconButton(
+              onPressed: () {
+                controller.decreament();
+              },
+              icon: Icon(
+                Icons.remove,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        )),
+          // child: GetX<CounterController>(
+          //   init: CounterController(),
+          //   builder: (controller)=>
           ),
         ),
-      ),
     );
   }
 }
