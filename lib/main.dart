@@ -6,6 +6,7 @@ import 'package:get_x_ecosystem_fluter_master/view/page_one.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_three.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_two.dart';
 import 'package:get_x_ecosystem_fluter_master/view/screens/dashboard.dart';
+import 'package:get_x_ecosystem_fluter_master/view/screens/mult_counter_page.dart';
 import 'view/screens/counter_page.dart';
 
 void main() {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Dashborad(),
+      home: MultiCounterSumPage(),
     );
   }
 }

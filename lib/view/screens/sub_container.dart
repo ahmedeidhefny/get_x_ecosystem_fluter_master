@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_x_ecosystem_fluter_master/controller/counter_controller.dart';
 
 class subContainer extends StatelessWidget {
+  var controller = Get.put(CounterController());
   final Color colour;
   //final String text;
 
@@ -15,9 +16,9 @@ class subContainer extends StatelessWidget {
       height: 100.0,
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30.0), color: colour),
-      child: GetBuilder<CounterController>(
-        init: CounterController(),
-        builder: (controller) => Center(child: Text('${controller.count}')),
+      child: Obx((){
+            return Center(child: Text('${controller.count2}'));
+          }
       ),
     );
   }
