@@ -20,7 +20,7 @@ class CounterPage extends StatelessWidget {
           children: [
             IconButton(
               onPressed: () {
-                controller.increament();
+                controller.increament2();
               },
               icon: Icon(
                 Icons.add,
@@ -28,12 +28,12 @@ class CounterPage extends StatelessWidget {
               ),
             ),
             Text(
-              '${controller.count.value}',
+              '${controller.count2.value}',
               style: TextStyle(fontSize: 16, color: Colors.white),
             ),
             IconButton(
               onPressed: () {
-                controller.decreament();
+                controller.decreament2();
               },
               icon: Icon(
                 Icons.remove,

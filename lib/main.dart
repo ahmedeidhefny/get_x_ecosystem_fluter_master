@@ -5,7 +5,8 @@ import 'package:get_x_ecosystem_fluter_master/view/home.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_one.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_three.dart';
 import 'package:get_x_ecosystem_fluter_master/view/page_two.dart';
-import 'view/screens/counter.dart';
+import 'package:get_x_ecosystem_fluter_master/view/screens/dashboard.dart';
+import 'view/screens/counter_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: CounterPage(),
+      home: Dashborad(),
     );
   }
 }
